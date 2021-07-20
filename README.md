@@ -1,27 +1,21 @@
 # AngularElementExample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+Questo è un progetto esempio per creare un nuovo angular element
 
-## Development server
+## Come è fatto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Si è creato l'app con il comando `ng new app`.
 
-## Code scaffolding
+Successivamente con il comando `ng add @angular/elements` si è installato le dipendenze e i polyfills.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Nell' App Module si è aggiunto nel metodo NgDoBootstrap() i comandi per definire un nuovo custom element.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usare il componente
+ 
+* Compilare l'app con il comando `ng build --prod --output-hashing none`
+* Copiare il contenuto della cartella app/dist nella cartella del progetto che ospiterà l'angular element
+* Aggiungere i file js come fatto nell' index.html di questo progetto.
+* Se si include l'elemento in un altro progetto angular, si deve aggiungere `  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],` nell' App Module
