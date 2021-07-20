@@ -7,18 +7,22 @@ import { WidgetComponent } from './widget/widget.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WidgetComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [],
+  entryComponents: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
+  constructor(private injector: Injector) { }
+
+  ngDoBootstrap() {
     const element = createCustomElement(WidgetComponent, { injector: this.injector });
     customElements.define('app-widget', element);
+
   }
-  ngDoBootstrap() { }
 }
