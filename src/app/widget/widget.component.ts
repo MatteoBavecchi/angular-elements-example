@@ -10,6 +10,7 @@ export class WidgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Ciao");
   }
 
 }
